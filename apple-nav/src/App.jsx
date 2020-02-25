@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route } from "react-router-dom";
+import { MainNav, Home, SubNav } from "./components/index";
+import data from "./subNavData";
 import './App.css';
 
 function App() {
+  console.log(data);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <MainNav />
       </header>
+      <Route exact path="/"><Home /></Route>
+      <Route path="/mac">
+        <SubNav items={data.mac} />
+      </Route>
+      <Route path="/ipad"></Route>
+      <Route path="/iphone"></Route>
+      <Route path="/watch"></Route>
+      <Route path="/tv"></Route>
+      <Route path="/music"></Route>
+      <Route path="/support"></Route>
     </div>
   );
 }

@@ -1,0 +1,15 @@
+.sub-nav-wrapper {
+    background-color: rgba(245, 245, 247, 0.6);
+}
+
+.sub-nav-wrapper nav {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1% 0;
+}
+
+.sub-nav-item img {
+    height: 54px;
+}
