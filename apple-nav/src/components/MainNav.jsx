@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import "./MainNav.css"
+import searchImage from "../images/search.png";
+import shopImage from "../images/shop.png";
 
 const MainNavWrapper = styled.div`
     width: 100%;
@@ -34,6 +36,8 @@ const MainNav = () => {
                 <StyledNavLink to="/tv">TV</StyledNavLink>
                 <StyledNavLink to="/music">Music</StyledNavLink>
                 <StyledNavLink to="/support">Support</StyledNavLink>
+                <StyledNavLink to="/"><img src={searchImage} alt="Search Icon" /></StyledNavLink>
+                <StyledNavLink to="/"><img src={shopImage} alt="Search Icon" /></StyledNavLink>
             </StyledNav>
         </MainNavWrapper>
     );
